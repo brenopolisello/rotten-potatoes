@@ -39,6 +39,7 @@ jobs:
             brenopolisello/rotten-potatoes:v2
             brenopolisello/rotten-potatoes:${{ github.run_number }}
             
+  # 
   CD:
    runs-on: ubuntu-latest
    needs: [CI]
