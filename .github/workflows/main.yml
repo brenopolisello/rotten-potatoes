@@ -37,6 +37,7 @@ jobs:
           push: true
           tags:
             brenopolisello/rotten-potatoes:v2
+            brenopolisello/rotten-potatoes:${{ github.run_number }}
             
   CD:
    runs-on: ubuntu-latest
@@ -54,11 +55,11 @@ jobs:
         manifests: | 
           k8s/mongodb/deployment.yaml
           k8s/mongodb/service.yaml
-     - name: Deploy Wev
+     - name: Deploy Web
        uses: Azure/k8s-deploy@v1
        with:
         manifests: | 
           k8s/web/deployment.yaml
           k8s/web/service.yaml
-        images: brenopolisello/rotten-potatoes:v2
+        images: brenopolisello/rotten-potatoes:${{ github.run_number }}
 
