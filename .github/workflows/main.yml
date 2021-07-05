@@ -37,8 +37,9 @@ jobs:
           tags:
             brenopolisello/rotten-potatoes:latest
 
-  CD:  
+  CD:
     runs-on: ubuntu-latest
+    needs: [CI]
     steps:
       - uses: actions/checkout@v2
       - name: Kubernetes set context
