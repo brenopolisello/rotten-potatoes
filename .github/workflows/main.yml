@@ -36,5 +36,5 @@ jobs:
           context: ./src
           file: ./src/Dockerfile
           tags:
-            brenopolisello/rotten-potatoes:v2
+            brenopolisello/rotten-potatoes:latest
             brenopolisello/rotten-potatoes:v${{ github.run_number }}
