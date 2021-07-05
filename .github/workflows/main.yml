@@ -35,8 +35,7 @@ jobs:
           context: ./src
           file: ./src/Dockerfile
           tags:
-            brenopolisello/rotten-potatoes:latest
-
+            brenopolisello/rotten-potatoes:v2
   CD:
     runs-on: ubuntu-latest
     needs: [CI]
